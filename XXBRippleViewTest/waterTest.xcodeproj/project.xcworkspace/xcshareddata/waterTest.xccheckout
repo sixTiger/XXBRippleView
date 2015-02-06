@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8B09BC4D-1509-414E-814B-2C7A01659F6B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>waterTest</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FC695D859416BC2358869C6208BC9AA176FFCC1F</key>
+		<string>https://github.com/sixTiger/XXBRippleView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>XXBRippleViewTest/waterTest.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FC695D859416BC2358869C6208BC9AA176FFCC1F</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/sixTiger/XXBRippleView.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FC695D859416BC2358869C6208BC9AA176FFCC1F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FC695D859416BC2358869C6208BC9AA176FFCC1F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>XXBRippleView</string>
+		</dict>
+	</array>
+</dict>
+</plist>

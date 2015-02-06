@@ -108,9 +108,18 @@
     
     [self.layer addSublayer:circleShape];
     
-    CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-    scaleAnimation.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
-    scaleAnimation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeScale(self.pantographProportion, self.pantographProportion, 1)];
+    CAKeyframeAnimation *scaleAnimation = [CAKeyframeAnimation animation];
+    scaleAnimation.keyPath = @"transform.scale";
+    NSMutableArray *valueArray = [NSMutableArray array];
+    for(int i = 0 ; i<6 ; i++)
+    {
+        CGFloat percent = i/6.0 * self.pantographProportion;
+        NSValue *value = [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0 + percent ,1.0 + percent, 1)];
+        [valueArray addObject:value];
+    }
+    scaleAnimation.values = valueArray;
+    //到达每个点得时间点 百分比
+    scaleAnimation.keyTimes = @[@(0.1),@(0.4),@(0.65),@(0.85),@(0.95),@(1.0)];
     
     CABasicAnimation *alphaAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
     alphaAnimation.fromValue = @1;
@@ -144,14 +153,14 @@
 {
     if (_maxRadius <= 0)
     {
-        _maxRadius = 50.0;
+        _maxRadius = 150.0;
     }
     return _maxRadius;
 }
 - (CGFloat)pantographProportion
 {
     if (_pantographProportion <=0) {
-        _pantographProportion = self.maxRadius/self.minRadius;
+        _pantographProportion = self.maxRadius/self.minRadius - 1.0;
     }
     return _pantographProportion;
 }
